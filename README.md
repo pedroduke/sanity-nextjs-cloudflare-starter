@@ -8,7 +8,8 @@ A production-ready website starter combining [Next.js](https://nextjs.org/) 16, 
 
 > **Note:** After clicking the deploy button, you still need to configure environment variables in your Cloudflare dashboard (see [Environment Variables](#environment-variables)).
 
-<!-- Demo link coming soon -->
+## Demo
+https://sanity-next-cloudflare-starter.pedroduque8.workers.dev/
 
 ## Features
 
