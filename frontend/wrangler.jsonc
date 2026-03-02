@@ -1,0 +1,16 @@
+{
+  "main": ".open-next/worker.js",
+  "name": "sanity-next-cloudflare-starter",
+  "compatibility_date": "2026-02-28",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "sanity-next-cloudflare-starter",
+    },
+  ],
+}

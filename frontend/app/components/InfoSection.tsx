@@ -1,0 +1,32 @@
+import { type PortableTextBlock } from 'next-sanity'
+
+import { CustomPortableText } from '@/app/components/PortableText'
+import { type InfoSection as InfoSectionType } from '@/sanity.types'
+
+type InfoProps = {
+  block: InfoSectionType
+  index: number
+  // Needed if you want to createDataAttributes to do non-text overlays in Presentation (Visual Editing)
+  pageId: string
+  pageType: string
+}
+
+export const InfoSection = ({ block }: InfoProps) => {
+  return (
+    <div className="container my-12">
+      <div className="max-w-3xl">
+        {block?.heading && <h2 className="text-2xl md:text-3xl lg:text-4xl">{block.heading}</h2>}
+        {block?.subheading && (
+          <span className="block mt-4 mb-8 text-lg uppercase font-light text-gray-400">
+            {block.subheading}
+          </span>
+        )}
+        <div className="mt-4">
+          {block?.content?.length && (
+            <CustomPortableText className="" value={block.content as PortableTextBlock[]} />
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
